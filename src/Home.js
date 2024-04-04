@@ -2,7 +2,6 @@ import { SectionList, Image, ImageBackground, StyleSheet, Text, View } from "rea
 import OnibusLista from "./OnibusLista";
 import { useState } from "react";
 import Header from "./components/Header";
-
 const image = require("../assets/home.png");
 
 const lista = [
@@ -96,7 +95,7 @@ export default function Home() {
                     numCollums={2}
                 />
             </ImageBackground>
-        </View>
+           </View> 
     )
 }
 

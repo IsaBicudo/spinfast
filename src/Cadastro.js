@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
@@ -12,7 +13,6 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [confirmada, setConfirmada] = useState("");
-
 
     function Cadastrar() {
         if (nome == "") {
@@ -33,21 +33,14 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
         if (confirmada == "") {
             setErro("Campo obrigatório");
         }
-
         else {
             setLogado(true);
             setCadastro(false);
             setConcluido(true);
         }
     }
-
-    function Voltar() {
-        setCadastro(false);
-        setLogado(false);
-    }
     return (
         <View style={css.view}>
-
             <ImageBackground source={image} resizeMode="cover" style={css.image} >
                 <Image style={css.logo} source={require('../assets/logobus.png')} />
                 <ScrollView>
@@ -186,6 +179,7 @@ const css = StyleSheet.create({
         alignSelf: "center",
         width: "85%",
         marginBottom: 10,
-        marginTop: -8
-    }
-})
+        marginTop: -8,
+    },
+})     
+
