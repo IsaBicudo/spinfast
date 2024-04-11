@@ -4,13 +4,12 @@ import { useState } from 'react';
 const image = require("../assets/compra.jpeg")
 const imagem = require("../assets/LogoSpinfast.png")
 
-
-
 export default function AreadeCompra({ setFinalizar, setLocalizacao }) {
 
   function Finalizar() {
-    setFinalizar(false);
-    setLocalizacao(true);
+      alert("Compra efetuada com sucesso! Acompanhe a localização pelo menu Localização");
+
+    
   }
 
   return (
@@ -65,7 +64,7 @@ export default function AreadeCompra({ setFinalizar, setLocalizacao }) {
             }}
           />
           <TouchableOpacity style={styles.btn} >
-            <Text style={styles.btnText}>Finalizar</Text>
+            <Text style={styles.btnText} onPress={Finalizar}>Finalizar</Text>
           </TouchableOpacity>
         </ScrollView>
       </ImageBackground>
@@ -101,7 +100,7 @@ const styles = StyleSheet.create({
     color: "white",
     backgroundColor: "#E2DAB9",
     borderRadius: 5,
-    marginTop: 25,
+    marginTop: 45,
     marginBottom: 15,
     alignSelf: "center"
   },

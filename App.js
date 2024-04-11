@@ -43,7 +43,8 @@ export default function App() {
           headerTitleStyle: { color: "black" },
           tabBarActiveTintColor: "black",
           tabBarInactiveTintColor: "grey",
-          headerShown: false
+          headerShown: false,
+          tabBarHideOnKeyboard: true
         }}
         >
         <Tab.Screen name="Home" component={Home} />
