@@ -4,10 +4,35 @@ import { useState } from 'react';
 const image = require("../assets/compra.jpeg")
 const imagem = require("../assets/LogoSpinfast.png")
 
-export default function AreadeCompra({ setFinalizar, setLocalizacao }) {
+export default function AreadeCompra() {
 
-  function Finalizar() {
-      alert("Compra efetuada com sucesso! Acompanhe a localização pelo menu Localização");
+    const [erro, setErro] = useState("");
+    const [ponto, setPonto] = useState("");
+    const [destino, setDestino] = useState("");
+    const [horario, setHorario] = useState("");
+    const [onibus, setOnibus] = useState("");
+    const [pagamento, setPagamento] = useState("");
+
+  function AreadeCompra() {
+    if (ponto == "") {
+      setErro("Campo obrigatório");
+  }
+  if (destino == "") {
+      setErro("Campo obrigatório");
+  }
+  if (horario == "") {
+      setErro("Campo obrigatório");
+  }
+  if (onibus == "") {
+      setErro("Campo obrigatório");
+  }
+  if (pagamento == "") {
+      setErro("Campo obrigatório");
+  }
+
+  else {
+    alert("Compra efetuada com sucesso! Acompanhe a localização pelo menu Localização.");
+  }
 
     
   }
@@ -25,17 +50,22 @@ export default function AreadeCompra({ setFinalizar, setLocalizacao }) {
                 fontWeight: "bold", fontSize: "20%",
               },
             }}
+            onChangeText={(digitado) => setPonto(digitado)}
+            value={ponto}
           />
+          {erro && <Text style={styles.erro}>{erro}</Text>}
           <TextInput style={styles.input}
             placeholder="Destino"
             placeholderTextColor="black"
-
             css={{
               placeholderStyle: {
                 fontWeight: "bold",
               },
             }}
+            onChangeText={(digitado) => setDestino(digitado)}
+            value={destino}
           />
+          {erro && <Text style={styles.erro}>{erro}</Text>}
           <TextInput style={styles.input}
             placeholder="Horário"
             placeholderTextColor="black"
@@ -44,7 +74,10 @@ export default function AreadeCompra({ setFinalizar, setLocalizacao }) {
                 fontWeight: "bold",
               },
             }}
+            onChangeText={(digitado) => setHorario(digitado)}
+            value={horario}
           />
+          {erro && <Text style={styles.erro}>{erro}</Text>}
           <TextInput style={styles.input}
             placeholder="Selecionar Ônibus"
             placeholderTextColor="black"
@@ -53,7 +86,10 @@ export default function AreadeCompra({ setFinalizar, setLocalizacao }) {
                 fontWeight: "bold",
               },
             }}
+            onChangeText={(digitado) => setOnibus(digitado)}
+            value={onibus}
           />
+          {erro && <Text style={styles.erro}>{erro}</Text>}
           <TextInput style={styles.input}
             placeholder="Forma de Pagamento"
             placeholderTextColor="black"
@@ -62,9 +98,12 @@ export default function AreadeCompra({ setFinalizar, setLocalizacao }) {
                 fontWeight: "bold",
               },
             }}
+            onChangeText={(digitado) => setPagamento(digitado)}
+            value={pagamento}
           />
+          {erro && <Text style={styles.erro}>{erro}</Text>}
           <TouchableOpacity style={styles.btn} >
-            <Text style={styles.btnText} onPress={Finalizar}>Finalizar</Text>
+            <Text style={styles.btnText} onPress={AreadeCompra}>Finalizar</Text>
           </TouchableOpacity>
         </ScrollView>
       </ImageBackground>
@@ -117,5 +156,12 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     marginBottom: 2,
     marginTop: -13
+  },
+  erro: {
+    fontSize: 11,
+    color: "red",
+    alignSelf: "center",
+    width: "85%",
+    marginBottom: 10
   },
 });
