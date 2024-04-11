@@ -31,7 +31,6 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
             setErro("Campo obrigatório");
         }
 
-
         if (confirmada == "") {
             setErro("Campo obrigatório");
         }
@@ -40,8 +39,6 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
             setCadastro(false);
             setConcluido(true);
         }
-
-        
     }
     function Voltar() {
         setLogado(false);
@@ -187,7 +184,7 @@ const css = StyleSheet.create({
         alignSelf: "center",
         width: "85%",
         marginBottom: 10,
-        marginTop: -8,
+        marginTop: -15
     },
 })
 
