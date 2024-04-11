@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     width: '85%',
     height: 50,
     padding: 10,
-    marginTop: 20,
+    marginTop: 24,
     borderWidth: 0.3,
     fontSize: 16.5,
     alignSelf: "center"
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     color: "white",
     backgroundColor: "#E2DAB9",
     borderRadius: 5,
-    marginTop: 25,
+    marginTop: 70,
     marginBottom: 15,
     alignSelf: "center"
   },
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "30%",
     resizeMode: "contain",
-    marginBottom: 5,
-    marginTop: -20
+    marginBottom: 2,
+    marginTop: -13
   },
 });

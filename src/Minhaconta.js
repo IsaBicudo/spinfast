@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ImageBackground, Image, View, StyleSheet, FlatList, Text, TouchableOpacity } from "react-native";
 import ContaLista from "./ContaLista";
 import Reclamacoes from './Reclamacoes';
+import Header from "./components/Header";
 
 const imagem = require("../assets/usuario.png")
 const image = require("../assets/conta.jpeg")
@@ -40,6 +41,7 @@ export default function Minhaconta({ navigation }) {
 
     return (
         <View style={styles.container}>
+            <Header />
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
                 <View style={styles.boxPerfil}>
                     <Image source={imagem} style={styles.imagem} />

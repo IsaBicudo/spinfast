@@ -1,10 +1,12 @@
-import React from 'react'
-import { ImageBackground, Text, TouchableOpacity, View, StyleSheet, TextInput } from 'react-native'
+import React from 'react';
+import { ImageBackground, Text, TouchableOpacity, View, StyleSheet, TextInput } from 'react-native';
+import Header from "./components/Header";
 
 const image = require("../assets/Reclamacoes.jpeg")
 export default function Reclamacoes({ setExibe }) {
   return (
     <View style={styles.container}>
+      <Header />
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
         <Text style={styles.texto} >Conte-nos um pouco mais para que possamos te ajudar.</Text>
         <TextInput style={styles.input}
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     textAlign: "center",
+    marginBottom: 50
   },
   input: {
     borderRadius: 5,
@@ -54,10 +57,11 @@ const styles = StyleSheet.create({
     width: '85%',
     height: 50,
     padding: 10,
-    marginTop: 20,
+    marginTop: 10,
     borderWidth: 0.3,
     fontSize: 17.5,
-    alignSelf: "center"
+    alignSelf: "center",
+    marginBottom: 10
   },
   inputAqui: {
     borderRadius: 5,
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
     height: 190,
     padding: 10,
     marginTop: 20,
-    marginBottom: 30,
+    marginBottom: 33,
     borderWidth: 0.3,
     fontSize: 17.5,
     alignSelf: "center",
@@ -78,7 +82,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#E2DAB9",
     borderRadius: 5,
     marginTop: 10,
-    marginBottom: 3,
+    marginBottom: 15,
     alignSelf: "center"
   },
   btnText: {

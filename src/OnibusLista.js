@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
-export default function ProdutoLista({imagem, nomeveiculo, nomecondutor}) {
-    return(
+export default function ProdutoLista({ imagem, nomeveiculo, nomecondutor }) {
+    return (
         <View style={css.container}>
             <Image style={css.imagem} source={imagem} />
             <Text style={css.nomeveiculo}>{nomeveiculo}</Text>

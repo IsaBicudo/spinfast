@@ -95,7 +95,7 @@ export default function Home() {
                     numCollums={2}
                 />
             </ImageBackground>
-           </View> 
+        </View>
     )
 }
 
@@ -117,6 +117,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#E2DAB9",
         width: "100%",
         height: 90,
-        resizeMode: "contain"        
+        resizeMode: "contain"
     }
 })

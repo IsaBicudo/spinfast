@@ -33,9 +33,9 @@ export default function App() {
     return (<Concluido setConcluido={setConcluido} setCadastro={setCadastro} setLogado={setLogado} />)
   }
 
-  return ( 
+  return (
 
-    <NavigationContainer>     
+    <NavigationContainer>
       <Tab.Navigator initialRouteName="Home"
         screenOptions={{
           tabBarStyle: { backgroundColor: "#E2DAB9" },
@@ -43,9 +43,12 @@ export default function App() {
           headerTitleStyle: { color: "black" },
           tabBarActiveTintColor: "black",
           tabBarInactiveTintColor: "grey",
-          headerShown: false
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          )
         }}
-        >
+      >
         <Tab.Screen name="Home" component={Home} />
 
         <Tab.Screen

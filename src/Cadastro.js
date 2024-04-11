@@ -39,6 +39,10 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
             setConcluido(true);
         }
     }
+    function Voltar() {
+        setLogado(false);
+        setCadastro(false);
+    }
     return (
         <View style={css.view}>
             <ImageBackground source={image} resizeMode="cover" style={css.image} >
@@ -163,7 +167,7 @@ const css = StyleSheet.create({
         backgroundColor: "#E2DAB9",
         borderRadius: 5,
         marginTop: 18,
-        marginBottom: 8,
+        marginBottom: 12,
         alignSelf: "center"
     },
     btnText: {
@@ -181,5 +185,5 @@ const css = StyleSheet.create({
         marginBottom: 10,
         marginTop: -8,
     },
-})     
+})
 

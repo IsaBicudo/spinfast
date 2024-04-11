@@ -11,7 +11,6 @@ export default function Concluido({ setCadastro, setConcluido, setLogado }) {
         setCadastro(false);
     }
 
-
     return (
         <View style={css.view}>
 
@@ -28,7 +27,7 @@ export default function Concluido({ setCadastro, setConcluido, setLogado }) {
                 <TouchableOpacity style={css.btn} onPress={Voltar}>
                     <Text style={css.btnText}>Login</Text>
                 </TouchableOpacity>
-            </ImageBackground> 
+            </ImageBackground>
         </View>
     )
 }
