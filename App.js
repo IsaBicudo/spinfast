@@ -44,12 +44,19 @@ export default function App() {
           tabBarActiveTintColor: "black",
           tabBarInactiveTintColor: "grey",
           headerShown: false,
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          )
+          tabBarHideOnKeyboard: true
         }}
       >
-        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen 
+          name="Home" 
+          component={Home}
+          options={{
+            tabLabel: "Home",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="home" color={color} size={size} />
+            )
+          }}
+        />
 
         <Tab.Screen
           name="Área de Compra"

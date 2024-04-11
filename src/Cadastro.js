@@ -30,6 +30,8 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
         if (senha == "") {
             setErro("Campo obrigatório");
         }
+
+
         if (confirmada == "") {
             setErro("Campo obrigatório");
         }
@@ -38,6 +40,8 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
             setCadastro(false);
             setConcluido(true);
         }
+
+        
     }
     function Voltar() {
         setLogado(false);
