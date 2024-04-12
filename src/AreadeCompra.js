@@ -6,35 +6,41 @@ const imagem = require("../assets/LogoSpinfast.png")
 
 export default function AreadeCompra() {
 
-    const [erro, setErro] = useState("");
-    const [ponto, setPonto] = useState("");
-    const [destino, setDestino] = useState("");
-    const [horario, setHorario] = useState("");
-    const [onibus, setOnibus] = useState("");
-    const [pagamento, setPagamento] = useState("");
+  const [erro, setErro] = useState("");
+  const [ponto, setPonto] = useState("");
+  const [destino, setDestino] = useState("");
+  const [horario, setHorario] = useState("");
+  const [onibus, setOnibus] = useState("");
+  const [pagamento, setPagamento] = useState("");
 
   function AreadeCompra() {
     if (ponto == "") {
       setErro("Campo obrigatório");
-  }
-  if (destino == "") {
+      return;
+    }
+    if (destino == "") {
       setErro("Campo obrigatório");
-  }
-  if (horario == "") {
+      return;
+    }
+    if (horario == "") {
       setErro("Campo obrigatório");
-  }
-  if (onibus == "") {
+      return;
+    }
+    if (onibus == "") {
       setErro("Campo obrigatório");
-  }
-  if (pagamento == "") {
+      return;
+    }
+    if (pagamento == "") {
       setErro("Campo obrigatório");
-  }
-
-  else {
-    alert("Compra efetuada com sucesso! Acompanhe a localização pelo menu Localização.");
-  }
-
-    
+      return;
+    }
+    if (ponto != ""
+      && destino != ""
+      && horario != ""
+      && onibus != ""
+      && pagamento != "") {
+      alert("Compra efetuada com sucesso! Acompanhe a localização pelo menu Localização.");
+    }
   }
 
   return (

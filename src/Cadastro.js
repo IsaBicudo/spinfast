@@ -17,24 +17,40 @@ export default function Cadastro({ setLogado, setCadastro, setConcluido }) {
     function Cadastrar() {
         if (nome == "") {
             setErro("Campo obrigatório");
+            return;
         }
+
         if (cpf == "") {
             setErro("Campo obrigatório");
+            return;
         }
+
         if (usuario == "") {
             setErro("Campo obrigatório");
+            return;
         }
+
         if (email == "") {
             setErro("Campo obrigatório");
+            return;
         }
+
         if (senha == "") {
             setErro("Campo obrigatório");
+            return;
         }
 
         if (confirmada == "") {
             setErro("Campo obrigatório");
+            return;
         }
-        else {
+
+        if (nome != ""
+            && cpf != ""
+            && usuario != ""
+            && email != ""
+            && senha != ""
+            && confirmada != "") {
             setLogado(true);
             setCadastro(false);
             setConcluido(true);
